@@ -1,0 +1,326 @@
+{
+	"info": {
+		"_postman_id": "b69b3e27-15d5-43e0-814d-d41bf99a7e70",
+		"name": "social-ap",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24774352"
+	},
+	"item": [
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Create post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTM0ZGM5ZTRkNTQ4NzFjYzZhZDNlNGMiLCJlbWFpbCI6InN0dWRlbnRAbWluZHguZWR1LnZuIiwidHlwZVRva2VuIjoiQVQiLCJpYXQiOjE2OTc5ODY5OTUsImV4cCI6MTY5Nzk4NzI5NX0.IoBPXqyj7WBLM7JPzoZkAXOQ_MsYuAhxOi7yo56MKng"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\":\"hú ae, có ai đang đọc bài viết này cho 1 comment nào!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/posts"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTM0ZGM5ZTRkNTQ4NzFjYzZhZDNlNGMiLCJlbWFpbCI6InN0dWRlbnRAbWluZHguZWR1LnZuIiwidHlwZVRva2VuIjoiQVQiLCJpYXQiOjE2OTgwNTEwNzcsImV4cCI6MTY5ODA1MTM3N30.zwqI1gx59uERJYQDrf-7sPlgmkoPCklzt3-C8SFceW4"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/posts?page=1&pageSize=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"posts"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTM0ZGM5ZTRkNTQ4NzFjYzZhZDNlNGMiLCJlbWFpbCI6InN0dWRlbnRAbWluZHguZWR1LnZuIiwidHlwZVRva2VuIjoiQVQiLCJpYXQiOjE2OTgwMzI1MjcsImV4cCI6MTY5ODAzMjgyN30.4fiew2K1Sfiwq-l_bD3-IieWIuRPCwlWVJwu9jp-Ed0"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\":\"Bài post này cần sửa lại 1 chút, lát nữa sẽ thông báo cho mọi người nha!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/posts/653539bc2662dda8ab033d72"
+					},
+					"response": []
+				},
+				{
+					"name": "Get post by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTM0ZGM5ZTRkNTQ4NzFjYzZhZDNlNGMiLCJlbWFpbCI6InN0dWRlbnRAbWluZHguZWR1LnZuIiwidHlwZVRva2VuIjoiQVQiLCJpYXQiOjE2OTgwNDYwNzcsImV4cCI6MTY5ODA0NjM3N30.si0ULHzo3N_738zszVJUjuaPLAb1N1RdvxlaCAcWfQI"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/posts/653539bc2662dda8ab033d72"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete post by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTM0ZGM5ZTRkNTQ4NzFjYzZhZDNlNGMiLCJlbWFpbCI6InN0dWRlbnRAbWluZHguZWR1LnZuIiwidHlwZVRva2VuIjoiQVQiLCJpYXQiOjE2OTgwNDY4MzMsImV4cCI6MTY5ODA0NzEzM30.IqAhJ7nKfgjgCN4yaLhxW-DkcwUaNVAgpi8Ql9nZ6cI"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/posts/653539bc2662dda8ab033d72"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "Get comment by list id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTM0ZGM5ZTRkNTQ4NzFjYzZhZDNlNGMiLCJlbWFpbCI6InN0dWRlbnRAbWluZHguZWR1LnZuIiwidHlwZVRva2VuIjoiQVQiLCJpYXQiOjE2OTgwNDYwNzcsImV4cCI6MTY5ODA0NjM3N30.si0ULHzo3N_738zszVJUjuaPLAb1N1RdvxlaCAcWfQI"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/comments?listPostId=65351c47f991d10b413ab480,653539bc2662dda8ab033d72",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"comments"
+							],
+							"query": [
+								{
+									"key": "listPostId",
+									"value": "65351c47f991d10b413ab480,653539bc2662dda8ab033d72"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create comment for post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTM0ZGM5ZTRkNTQ4NzFjYzZhZDNlNGMiLCJlbWFpbCI6InN0dWRlbnRAbWluZHguZWR1LnZuIiwidHlwZVRva2VuIjoiQVQiLCJpYXQiOjE2OTgwNDcyOTYsImV4cCI6MTY5ODA0NzU5Nn0.P0l-13otOGCbhlqdz3lgPHHrSBSGe8lj-jFdI3ANz2k"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"postId\": \"65351c47f991d10b413ab480\",\n    \"contentComment\":\"huhu, buồn quá, không có ai ở đây hết :(((\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/comments"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete comment by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTM0ZGM5ZTRkNTQ4NzFjYzZhZDNlNGMiLCJlbWFpbCI6InN0dWRlbnRAbWluZHguZWR1LnZuIiwidHlwZVRva2VuIjoiQVQiLCJpYXQiOjE2OTgwNDY4MzMsImV4cCI6MTY5ODA0NzEzM30.IqAhJ7nKfgjgCN4yaLhxW-DkcwUaNVAgpi8Ql9nZ6cI"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/comments/6536205639dc18d3210cc86a"
+					},
+					"response": []
+				},
+				{
+					"name": "Update comment by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTM0ZGM5ZTRkNTQ4NzFjYzZhZDNlNGMiLCJlbWFpbCI6InN0dWRlbnRAbWluZHguZWR1LnZuIiwidHlwZVRva2VuIjoiQVQiLCJpYXQiOjE2OTgwNDczMzAsImV4cCI6MTY5ODA0NzYzMH0.itqrg8n-iEWnD33He1rOxPEWK8YsRz1oeKOfKaVfWHU"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\": \"Test thử tí thôi mà\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/comments/6536254cb540eab0349323f2"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Refresh Token",
+			"item": [
+				{
+					"name": "Get new Access token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTM0ZGM5ZTRkNTQ4NzFjYzZhZDNlNGMiLCJlbWFpbCI6InN0dWRlbnRAbWluZHguZWR1LnZuIiwidHlwZVRva2VuIjoiUlQiLCJpYXQiOjE2OTgwNTA5MDMsImV4cCI6MTY5ODY1NTcwM30.7JkV06w7zlVxcgSdwc0QSaT9-dNnvoBj4pdwI5zH6As"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/authentication"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sign up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"student@mindx.edu.vn\",\n    \"password\": \"123123123\",\n    \"userName\":\"Nguyễn Tiến Tài\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/users/sign-up"
+			},
+			"response": []
+		},
+		{
+			"name": "Sign in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"student@mindx.edu.vn\",\n    \"password\": \"123123123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/users/sign-in"
+			},
+			"response": []
+		},
+		{
+			"name": "Get user information",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTM0ZGM5ZTRkNTQ4NzFjYzZhZDNlNGMiLCJlbWFpbCI6InN0dWRlbnRAbWluZHguZWR1LnZuIiwidHlwZVRva2VuIjoiQVQiLCJpYXQiOjE2OTc5Nzg1MTAsImV4cCI6MTY5Nzk3ODgxMH0.W4jKpKzqXJQjBLi-lR0Wu2PIy-eo1Kh2SMWQdMkPxEw"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"student@mindx.edu.vn\",\n    \"password\": \"123123123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/users/6534dc9e4d54871cc6ad3e4c"
+			},
+			"response": []
+		}
+	]
+}
