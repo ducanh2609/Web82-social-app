@@ -4,6 +4,7 @@ import middlewares from "../../middlewares/index.js";
 
 const UserRouter = Router();
 
+UserRouter.post('/forget-password', userController.forgetPassword);
 UserRouter.post('/sign-up', middlewares.validateSignUp, userController.signUp);
 UserRouter.post('/sign-in', middlewares.validateSignIn, userController.signIn);
 UserRouter.get('/:id', middlewares.verifyAccessToken, userController.getUserInfo);
